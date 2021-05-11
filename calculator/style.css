@@ -1,0 +1,86 @@
+body, html {
+    height: 100%;
+}
+
+button {
+    border: 1px black solid;
+    outline: 0;
+    transition: transform .1s ease;
+    font-size: 28px;
+}
+
+button:active {
+    transform: translateY(5px);
+}
+
+.calculator-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    background: lightgray;
+    border: 1px black solid;
+    border-radius: 3%;
+    min-width: 300px;
+}
+
+.title{
+    margin-bottom: 10px;
+    text-align:center;
+    width: 384px;
+    line-height: 48px;
+    font-size: 28px;
+}
+
+.top-bar{
+    display: flex;
+    width: 100%;
+}
+
+.top-bar button {
+    @include shadow(#ffd166);
+    background: #ffd166;
+    flex: .9;
+    height: 48px;
+    line-height: 48px;
+    margin: 10px;
+}
+
+.top-bar div {
+    border: 1px black solid;
+    background: white;
+    flex: 4;
+    font-size: 28px;
+    height: 26px;
+    margin: 10px;
+    padding: 12px;
+    text-align: right;
+}
+
+.keys {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 290px;
+}
+
+.keys button {
+    height: 50px;
+    line-height: 48px;
+    margin: 9px;
+    width: 75px;
+}
+
+.keys button.op{
+    @include shadow(#ffd166);
+    background: #ffd166;
+    line-height: 45px;
+}
+
+.keys button.equals{
+    @include shadow(#06d6a0);
+    background: #06d6a0;
+    line-height: 45px;
+}
